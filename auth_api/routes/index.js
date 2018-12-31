@@ -7,12 +7,14 @@ if (process.env.DB_TYPE === 'mysql'){
 	tricks.mysqlPollConnection()	
 }
 
-const users_ctrl = require('../models/users')
+
+const roles_ctrl = require('../models/companies')
 
 console.log("List Users: ")
-let prom = users_ctrl.listUsers()
+let prom = roles_ctrl.listCompanies()
 .then(function(results){
-	console.log(results.active)
+	console.log("Roles:")
+	console.log(results.length)
 })
 .catch(function(err){
 	console.log(err)
