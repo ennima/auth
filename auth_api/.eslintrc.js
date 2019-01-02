@@ -22,7 +22,7 @@ module.exports = {
         "block-spacing": "error",
         "brace-style": "error",
         "callback-return": "error",
-        "camelcase": ["error", {properties: "always"}],
+        /*"camelcase": ["error", {properties: "never"}],*/
         "capitalized-comments": "off",
         "class-methods-use-this": "error",
         "comma-dangle": "error",

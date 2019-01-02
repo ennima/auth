@@ -11,9 +11,9 @@ const db = require('../models/db.js');
 function mysqlPollConnection() {
 
   setInterval(function () {
-    const query = 'SELECT 1;';
+    const query = 'SELECT ?;';
 
-    db.executeQuery(query, function(error, data) {
+    db.executeQuery(query, [1] ,function(error, data) {
 
       if (error === null) {
         console.log('-- Poll connection --');
